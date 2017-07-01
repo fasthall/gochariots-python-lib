@@ -1,13 +1,17 @@
 import requests
 import json
+from fnvhash import fnv1a_64
 
 host = ""
 
 class Record:
     """Record consists of key-value pairs and casual dependency"""
-    def __init__(self, seed, hash):
+    def __init__(self, seed):
         self.tags = {}
         self.seed = seed
+        self.hash = 0
+
+    def setHash(self, hash):
         self.hash = hash
 
     def add(self, key, value):
@@ -28,3 +32,9 @@ def post(record):
         print("Host not set yet")
         return
     return requests.post(host + "/record", json = record.toJSON())
+
+def getHash(record):
+    result = []
+    for k in record.tags:
+        result.append(fnv1a_64((k + ":" + record.tags[k]).encode()))
+    return result
