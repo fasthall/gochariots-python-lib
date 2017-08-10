@@ -13,7 +13,7 @@ Python library for GoChariots
 
     r2 = gochariots.Record(seed)
     r2.add("second", "event")
-    r2.setHash(gochariots.getHash(r1)[0])
+    r2.addHash(gochariots.getHash(r1)[0])
 
     result = gochariots.post(r2)
     print(result.content)
