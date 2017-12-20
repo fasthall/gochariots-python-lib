@@ -1,7 +1,6 @@
 import grpc
 import batcherrpc_pb2
 import batcherrpc_pb2_grpc
-from fnvhash import fnv1a_64
 
 class RPCClient:
     def __init__(self, host):
