@@ -1,16 +1,8 @@
-import gochariots
+import gochariots_client
+import uuid
 
-seed = 9527
-gochariots.setHost("localhost:8080")
+client = gochariots_client.RPCClient('localhost:9000')
+record = gochariots_client.Record(str(uuid.uuid4()), 1, str(uuid.uuid4()))
+record.addTag('k', 'v')
 
-r1 = gochariots.Record(seed)
-r1.add("first", "event")
-
-r2 = gochariots.Record(seed)
-r2.add("second", "event")
-r2.setHash(gochariots.getHash(r1)[0])
-
-result = gochariots.post(r2)
-print(result.content)
-result = gochariots.post(r1)
-print(result.content)
+res = client.asyncPostRecord(record)
