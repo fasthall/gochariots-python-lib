@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='batcherrpc.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x10\x62\x61tcherrpc.proto\"\xe2\x01\n\tRPCRecord\x12\n\n\x02id\x18\x01 \x01(\x04\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x0c\n\x04host\x18\x03 \x01(\r\x12\x0b\n\x03lid\x18\x04 \x01(\r\x12\"\n\x04tags\x18\x05 \x03(\x0b\x32\x14.RPCRecord.TagsEntry\x12\x0c\n\x04hash\x18\x06 \x03(\x04\x12\x0c\n\x04seed\x18\x07 \x01(\x04\x12\x0c\n\x04toid\x18\x08 \x01(\r\x12 \n\tcausality\x18\t \x01(\x0b\x32\r.RPCCausality\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"*\n\x0cRPCCausality\x12\x0c\n\x04host\x18\x01 \x01(\r\x12\x0c\n\x04toid\x18\x02 \x01(\r\")\n\nRPCRecords\x12\x1b\n\x07records\x18\x01 \x03(\x0b\x32\n.RPCRecord\"\x1b\n\x08RPCReply\x12\x0f\n\x07message\x18\x01 \x01(\t\",\n\tRPCQueues\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x0e\n\x06queues\x18\x02 \x03(\t2\x94\x02\n\nBatcherRPC\x12(\n\rReceiveRecord\x12\n.RPCRecord\x1a\t.RPCReply\"\x00\x12*\n\x0eReceiveRecords\x12\x0b.RPCRecords\x1a\t.RPCReply\"\x00\x12&\n\x0bUpdateQueue\x12\n.RPCQueues\x1a\t.RPCReply\"\x00\x12,\n\x11TOIDReceiveRecord\x12\n.RPCRecord\x1a\t.RPCReply\"\x00\x12.\n\x12TOIDReceiveRecords\x12\x0b.RPCRecords\x1a\t.RPCReply\"\x00\x12*\n\x0fTOIDUpdateQueue\x12\n.RPCQueues\x1a\t.RPCReply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x10\x62\x61tcherrpc.proto\"\xe4\x01\n\tRPCRecord\x12\n\n\x02id\x18\x01 \x01(\t\x12\x11\n\ttimestamp\x18\x02 \x01(\x03\x12\x0c\n\x04host\x18\x03 \x01(\r\x12\x0b\n\x03lid\x18\x04 \x01(\r\x12\"\n\x04tags\x18\x05 \x03(\x0b\x32\x14.RPCRecord.TagsEntry\x12\x0e\n\x06parent\x18\x06 \x01(\t\x12\x0c\n\x04seed\x18\x07 \x01(\t\x12\x0c\n\x04toid\x18\x08 \x01(\r\x12 \n\tcausality\x18\t \x01(\x0b\x32\r.RPCCausality\x1a+\n\tTagsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"*\n\x0cRPCCausality\x12\x0c\n\x04host\x18\x01 \x01(\r\x12\x0c\n\x04toid\x18\x02 \x01(\r\")\n\nRPCRecords\x12\x1b\n\x07records\x18\x01 \x03(\x0b\x32\n.RPCRecord\"\x1b\n\x08RPCReply\x12\x0f\n\x07message\x18\x01 \x01(\t\",\n\tRPCQueues\x12\x0f\n\x07version\x18\x01 \x01(\r\x12\x0e\n\x06queues\x18\x02 \x03(\t2\x94\x02\n\nBatcherRPC\x12(\n\rReceiveRecord\x12\n.RPCRecord\x1a\t.RPCReply\"\x00\x12*\n\x0eReceiveRecords\x12\x0b.RPCRecords\x1a\t.RPCReply\"\x00\x12&\n\x0bUpdateQueue\x12\n.RPCQueues\x1a\t.RPCReply\"\x00\x12,\n\x11TOIDReceiveRecord\x12\n.RPCRecord\x1a\t.RPCReply\"\x00\x12.\n\x12TOIDReceiveRecords\x12\x0b.RPCRecords\x1a\t.RPCReply\"\x00\x12*\n\x0fTOIDUpdateQueue\x12\n.RPCQueues\x1a\t.RPCReply\"\x00\x62\x06proto3')
 )
 
 
@@ -38,14 +38,14 @@ _RPCRECORD_TAGSENTRY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='value', full_name='RPCRecord.TagsEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -58,8 +58,8 @@ _RPCRECORD_TAGSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=204,
-  serialized_end=247,
+  serialized_start=206,
+  serialized_end=249,
 )
 
 _RPCRECORD = _descriptor.Descriptor(
@@ -71,67 +71,67 @@ _RPCRECORD = _descriptor.Descriptor(
   fields=[
     _descriptor.FieldDescriptor(
       name='id', full_name='RPCRecord.id', index=0,
-      number=1, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='timestamp', full_name='RPCRecord.timestamp', index=1,
       number=2, type=3, cpp_type=2, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='host', full_name='RPCRecord.host', index=2,
       number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='lid', full_name='RPCRecord.lid', index=3,
       number=4, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='tags', full_name='RPCRecord.tags', index=4,
       number=5, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='hash', full_name='RPCRecord.hash', index=5,
-      number=6, type=4, cpp_type=4, label=3,
-      has_default_value=False, default_value=[],
+      name='parent', full_name='RPCRecord.parent', index=5,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='seed', full_name='RPCRecord.seed', index=6,
-      number=7, type=4, cpp_type=4, label=1,
-      has_default_value=False, default_value=0,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='toid', full_name='RPCRecord.toid', index=7,
       number=8, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='causality', full_name='RPCRecord.causality', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -145,7 +145,7 @@ _RPCRECORD = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=21,
-  serialized_end=247,
+  serialized_end=249,
 )
 
 
@@ -162,14 +162,14 @@ _RPCCAUSALITY = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='toid', full_name='RPCCausality.toid', index=1,
       number=2, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -182,8 +182,8 @@ _RPCCAUSALITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=249,
-  serialized_end=291,
+  serialized_start=251,
+  serialized_end=293,
 )
 
 
@@ -200,7 +200,7 @@ _RPCRECORDS = _descriptor.Descriptor(
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -213,8 +213,8 @@ _RPCRECORDS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=293,
-  serialized_end=334,
+  serialized_start=295,
+  serialized_end=336,
 )
 
 
@@ -231,7 +231,7 @@ _RPCREPLY = _descriptor.Descriptor(
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -244,8 +244,8 @@ _RPCREPLY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=336,
-  serialized_end=363,
+  serialized_start=338,
+  serialized_end=365,
 )
 
 
@@ -262,14 +262,14 @@ _RPCQUEUES = _descriptor.Descriptor(
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
       name='queues', full_name='RPCQueues.queues', index=1,
       number=2, type=9, cpp_type=9, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      options=None),
+      options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
@@ -282,8 +282,8 @@ _RPCQUEUES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=365,
-  serialized_end=409,
+  serialized_start=367,
+  serialized_end=411,
 )
 
 _RPCRECORD_TAGSENTRY.containing_type = _RPCRECORD
@@ -350,8 +350,8 @@ _BATCHERRPC = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=0,
   options=None,
-  serialized_start=412,
-  serialized_end=688,
+  serialized_start=414,
+  serialized_end=690,
   methods=[
   _descriptor.MethodDescriptor(
     name='ReceiveRecord',
@@ -412,283 +412,4 @@ _sym_db.RegisterServiceDescriptor(_BATCHERRPC)
 
 DESCRIPTOR.services_by_name['BatcherRPC'] = _BATCHERRPC
 
-try:
-  # THESE ELEMENTS WILL BE DEPRECATED.
-  # Please use the generated *_pb2_grpc.py files instead.
-  import grpc
-  from grpc.beta import implementations as beta_implementations
-  from grpc.beta import interfaces as beta_interfaces
-  from grpc.framework.common import cardinality
-  from grpc.framework.interfaces.face import utilities as face_utilities
-
-
-  class BatcherRPCStub(object):
-    # missing associated documentation comment in .proto file
-    pass
-
-    def __init__(self, channel):
-      """Constructor.
-
-      Args:
-        channel: A grpc.Channel.
-      """
-      self.ReceiveRecord = channel.unary_unary(
-          '/BatcherRPC/ReceiveRecord',
-          request_serializer=RPCRecord.SerializeToString,
-          response_deserializer=RPCReply.FromString,
-          )
-      self.ReceiveRecords = channel.unary_unary(
-          '/BatcherRPC/ReceiveRecords',
-          request_serializer=RPCRecords.SerializeToString,
-          response_deserializer=RPCReply.FromString,
-          )
-      self.UpdateQueue = channel.unary_unary(
-          '/BatcherRPC/UpdateQueue',
-          request_serializer=RPCQueues.SerializeToString,
-          response_deserializer=RPCReply.FromString,
-          )
-      self.TOIDReceiveRecord = channel.unary_unary(
-          '/BatcherRPC/TOIDReceiveRecord',
-          request_serializer=RPCRecord.SerializeToString,
-          response_deserializer=RPCReply.FromString,
-          )
-      self.TOIDReceiveRecords = channel.unary_unary(
-          '/BatcherRPC/TOIDReceiveRecords',
-          request_serializer=RPCRecords.SerializeToString,
-          response_deserializer=RPCReply.FromString,
-          )
-      self.TOIDUpdateQueue = channel.unary_unary(
-          '/BatcherRPC/TOIDUpdateQueue',
-          request_serializer=RPCQueues.SerializeToString,
-          response_deserializer=RPCReply.FromString,
-          )
-
-
-  class BatcherRPCServicer(object):
-    # missing associated documentation comment in .proto file
-    pass
-
-    def ReceiveRecord(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-      context.set_details('Method not implemented!')
-      raise NotImplementedError('Method not implemented!')
-
-    def ReceiveRecords(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-      context.set_details('Method not implemented!')
-      raise NotImplementedError('Method not implemented!')
-
-    def UpdateQueue(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-      context.set_details('Method not implemented!')
-      raise NotImplementedError('Method not implemented!')
-
-    def TOIDReceiveRecord(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-      context.set_details('Method not implemented!')
-      raise NotImplementedError('Method not implemented!')
-
-    def TOIDReceiveRecords(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-      context.set_details('Method not implemented!')
-      raise NotImplementedError('Method not implemented!')
-
-    def TOIDUpdateQueue(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-      context.set_details('Method not implemented!')
-      raise NotImplementedError('Method not implemented!')
-
-
-  def add_BatcherRPCServicer_to_server(servicer, server):
-    rpc_method_handlers = {
-        'ReceiveRecord': grpc.unary_unary_rpc_method_handler(
-            servicer.ReceiveRecord,
-            request_deserializer=RPCRecord.FromString,
-            response_serializer=RPCReply.SerializeToString,
-        ),
-        'ReceiveRecords': grpc.unary_unary_rpc_method_handler(
-            servicer.ReceiveRecords,
-            request_deserializer=RPCRecords.FromString,
-            response_serializer=RPCReply.SerializeToString,
-        ),
-        'UpdateQueue': grpc.unary_unary_rpc_method_handler(
-            servicer.UpdateQueue,
-            request_deserializer=RPCQueues.FromString,
-            response_serializer=RPCReply.SerializeToString,
-        ),
-        'TOIDReceiveRecord': grpc.unary_unary_rpc_method_handler(
-            servicer.TOIDReceiveRecord,
-            request_deserializer=RPCRecord.FromString,
-            response_serializer=RPCReply.SerializeToString,
-        ),
-        'TOIDReceiveRecords': grpc.unary_unary_rpc_method_handler(
-            servicer.TOIDReceiveRecords,
-            request_deserializer=RPCRecords.FromString,
-            response_serializer=RPCReply.SerializeToString,
-        ),
-        'TOIDUpdateQueue': grpc.unary_unary_rpc_method_handler(
-            servicer.TOIDUpdateQueue,
-            request_deserializer=RPCQueues.FromString,
-            response_serializer=RPCReply.SerializeToString,
-        ),
-    }
-    generic_handler = grpc.method_handlers_generic_handler(
-        'BatcherRPC', rpc_method_handlers)
-    server.add_generic_rpc_handlers((generic_handler,))
-
-
-  class BetaBatcherRPCServicer(object):
-    """The Beta API is deprecated for 0.15.0 and later.
-
-    It is recommended to use the GA API (classes and functions in this
-    file not marked beta) for all further purposes. This class was generated
-    only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0."""
-    # missing associated documentation comment in .proto file
-    pass
-    def ReceiveRecord(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-    def ReceiveRecords(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-    def UpdateQueue(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-    def TOIDReceiveRecord(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-    def TOIDReceiveRecords(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-    def TOIDUpdateQueue(self, request, context):
-      # missing associated documentation comment in .proto file
-      pass
-      context.code(beta_interfaces.StatusCode.UNIMPLEMENTED)
-
-
-  class BetaBatcherRPCStub(object):
-    """The Beta API is deprecated for 0.15.0 and later.
-
-    It is recommended to use the GA API (classes and functions in this
-    file not marked beta) for all further purposes. This class was generated
-    only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0."""
-    # missing associated documentation comment in .proto file
-    pass
-    def ReceiveRecord(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-      # missing associated documentation comment in .proto file
-      pass
-      raise NotImplementedError()
-    ReceiveRecord.future = None
-    def ReceiveRecords(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-      # missing associated documentation comment in .proto file
-      pass
-      raise NotImplementedError()
-    ReceiveRecords.future = None
-    def UpdateQueue(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-      # missing associated documentation comment in .proto file
-      pass
-      raise NotImplementedError()
-    UpdateQueue.future = None
-    def TOIDReceiveRecord(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-      # missing associated documentation comment in .proto file
-      pass
-      raise NotImplementedError()
-    TOIDReceiveRecord.future = None
-    def TOIDReceiveRecords(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-      # missing associated documentation comment in .proto file
-      pass
-      raise NotImplementedError()
-    TOIDReceiveRecords.future = None
-    def TOIDUpdateQueue(self, request, timeout, metadata=None, with_call=False, protocol_options=None):
-      # missing associated documentation comment in .proto file
-      pass
-      raise NotImplementedError()
-    TOIDUpdateQueue.future = None
-
-
-  def beta_create_BatcherRPC_server(servicer, pool=None, pool_size=None, default_timeout=None, maximum_timeout=None):
-    """The Beta API is deprecated for 0.15.0 and later.
-
-    It is recommended to use the GA API (classes and functions in this
-    file not marked beta) for all further purposes. This function was
-    generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
-    request_deserializers = {
-      ('BatcherRPC', 'ReceiveRecord'): RPCRecord.FromString,
-      ('BatcherRPC', 'ReceiveRecords'): RPCRecords.FromString,
-      ('BatcherRPC', 'TOIDReceiveRecord'): RPCRecord.FromString,
-      ('BatcherRPC', 'TOIDReceiveRecords'): RPCRecords.FromString,
-      ('BatcherRPC', 'TOIDUpdateQueue'): RPCQueues.FromString,
-      ('BatcherRPC', 'UpdateQueue'): RPCQueues.FromString,
-    }
-    response_serializers = {
-      ('BatcherRPC', 'ReceiveRecord'): RPCReply.SerializeToString,
-      ('BatcherRPC', 'ReceiveRecords'): RPCReply.SerializeToString,
-      ('BatcherRPC', 'TOIDReceiveRecord'): RPCReply.SerializeToString,
-      ('BatcherRPC', 'TOIDReceiveRecords'): RPCReply.SerializeToString,
-      ('BatcherRPC', 'TOIDUpdateQueue'): RPCReply.SerializeToString,
-      ('BatcherRPC', 'UpdateQueue'): RPCReply.SerializeToString,
-    }
-    method_implementations = {
-      ('BatcherRPC', 'ReceiveRecord'): face_utilities.unary_unary_inline(servicer.ReceiveRecord),
-      ('BatcherRPC', 'ReceiveRecords'): face_utilities.unary_unary_inline(servicer.ReceiveRecords),
-      ('BatcherRPC', 'TOIDReceiveRecord'): face_utilities.unary_unary_inline(servicer.TOIDReceiveRecord),
-      ('BatcherRPC', 'TOIDReceiveRecords'): face_utilities.unary_unary_inline(servicer.TOIDReceiveRecords),
-      ('BatcherRPC', 'TOIDUpdateQueue'): face_utilities.unary_unary_inline(servicer.TOIDUpdateQueue),
-      ('BatcherRPC', 'UpdateQueue'): face_utilities.unary_unary_inline(servicer.UpdateQueue),
-    }
-    server_options = beta_implementations.server_options(request_deserializers=request_deserializers, response_serializers=response_serializers, thread_pool=pool, thread_pool_size=pool_size, default_timeout=default_timeout, maximum_timeout=maximum_timeout)
-    return beta_implementations.server(method_implementations, options=server_options)
-
-
-  def beta_create_BatcherRPC_stub(channel, host=None, metadata_transformer=None, pool=None, pool_size=None):
-    """The Beta API is deprecated for 0.15.0 and later.
-
-    It is recommended to use the GA API (classes and functions in this
-    file not marked beta) for all further purposes. This function was
-    generated only to ease transition from grpcio<0.15.0 to grpcio>=0.15.0"""
-    request_serializers = {
-      ('BatcherRPC', 'ReceiveRecord'): RPCRecord.SerializeToString,
-      ('BatcherRPC', 'ReceiveRecords'): RPCRecords.SerializeToString,
-      ('BatcherRPC', 'TOIDReceiveRecord'): RPCRecord.SerializeToString,
-      ('BatcherRPC', 'TOIDReceiveRecords'): RPCRecords.SerializeToString,
-      ('BatcherRPC', 'TOIDUpdateQueue'): RPCQueues.SerializeToString,
-      ('BatcherRPC', 'UpdateQueue'): RPCQueues.SerializeToString,
-    }
-    response_deserializers = {
-      ('BatcherRPC', 'ReceiveRecord'): RPCReply.FromString,
-      ('BatcherRPC', 'ReceiveRecords'): RPCReply.FromString,
-      ('BatcherRPC', 'TOIDReceiveRecord'): RPCReply.FromString,
-      ('BatcherRPC', 'TOIDReceiveRecords'): RPCReply.FromString,
-      ('BatcherRPC', 'TOIDUpdateQueue'): RPCReply.FromString,
-      ('BatcherRPC', 'UpdateQueue'): RPCReply.FromString,
-    }
-    cardinalities = {
-      'ReceiveRecord': cardinality.Cardinality.UNARY_UNARY,
-      'ReceiveRecords': cardinality.Cardinality.UNARY_UNARY,
-      'TOIDReceiveRecord': cardinality.Cardinality.UNARY_UNARY,
-      'TOIDReceiveRecords': cardinality.Cardinality.UNARY_UNARY,
-      'TOIDUpdateQueue': cardinality.Cardinality.UNARY_UNARY,
-      'UpdateQueue': cardinality.Cardinality.UNARY_UNARY,
-    }
-    stub_options = beta_implementations.stub_options(host=host, metadata_transformer=metadata_transformer, request_serializers=request_serializers, response_deserializers=response_deserializers, thread_pool=pool, thread_pool_size=pool_size)
-    return beta_implementations.dynamic_stub(channel, 'BatcherRPC', cardinalities, options=stub_options)
-except ImportError:
-  pass
 # @@protoc_insertion_point(module_scope)

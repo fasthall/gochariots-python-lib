@@ -12,32 +12,37 @@ class RPCClient:
             id = record.id,
             host = record.host,
             tags = record.tags,
-            parent = record.parent,
-            seed = record.seed
+            causality = batcherrpc_pb2.RPCCausality(
+                host = record.prehost,
+                toid = record.pretoid
+            )
         )
-        return self.stub.ReceiveRecord(rpcRecord)
+        return self.stub.TOIDReceiveRecord(rpcRecord)
 
     def asyncPostRecord(self, record):
         rpcRecord = batcherrpc_pb2.RPCRecord(
             id = record.id,
             host = record.host,
             tags = record.tags,
-            parent = record.parent,
-            seed = record.seed
+            causality = batcherrpc_pb2.RPCCausality(
+                host = record.prehost,
+                toid = record.pretoid
+            )
         )
-        return self.stub.ReceiveRecord.future(rpcRecord)
+        return self.stub.TOIDReceiveRecord.future(rpcRecord)
 
 class Record:
     """Record consists of key-value pairs and casual dependency"""
-    def __init__(self, id, host, seed):
+    def __init__(self, id, host):
         self.id = id
         self.host = host
-        self.seed = seed
-        self.parent = ""
         self.tags = {}
+        self.prehost = 0
+        self.pretoid = 0
 
-    def setParent(self, parent):
-        self.parent = parent
+    def setParent(self, host, toid):
+        self.prehost = host
+        self.pretoid = toid
 
     def addTag(self, key, value):
         self.tags[key] = value
